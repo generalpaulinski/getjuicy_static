@@ -1,38 +1,313 @@
-.App {
-  text-align: center;
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Popup Styles */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.popup-content button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.popup-content button:first-of-type {
+    background-color: rgb(153, 27, 27);
+    color: white;
+}
+
+.popup-content button:last-of-type {
+    background-color: rgb(38, 38, 38);
+    color: white;
+}
+
+/* Header Styles */
+.main-header {
+    background-color: rgba(38, 38, 38, 0.8); /* Slightly transparent */
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    height: 40px; /* Adjust logo size */
+}
+
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.header-button {
+    background-color: rgb(153, 27, 27);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px; /* Rounded buttons */
+    cursor: pointer;
+    font-size: 1em;
+}
+
+/* Header with Background Image */
+.header-with-bg {
+    background-image: url("../public/images/background.png");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-top: 60px; /* Offset for fixed header */
+}
+
+.header-with-bg h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.header-with-bg p {
+    font-size: 1.5em;
+    margin: 10px 0 20px;
+}
+
+/* Call to Action Button */
+.cta-button {
+    background: linear-gradient(90deg, blue, red);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 25px; /* Rounded button */
+}
+
+/* Carousel Styles */
+.carousel {
+    height: 100vh; /* Full height */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Space between images */
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-slide {
+    position: relative;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    width: 20%; /* Each image takes 20% of the width */
+    height: 80%; /* Adjust height as needed */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+}
+
+.carousel-description {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+    width: 80%;
+}
+
+/* First Feature Section (3 features) */
+.features {
+    padding: 50px 0;
+    background-color: rgb(38, 38, 38);
+    color: white;
+}
+
+.features h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.feature-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.feature-item {
+    width: 30%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.feature-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.feature-item h3 {
+    font-size: 1.5em;
+    margin: 15px 0;
+}
+
+.feature-item p {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.feature-link {
+    color: rgb(153, 27, 27);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Second Feature Section (5 features) */
+.additional-features {
+    padding: 50px 0;
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.additional-features h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.additional-feature-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.additional-feature-item {
+    width: 18%; /* 5 items per row */
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.additional-feature-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.additional-feature-item h3 {
+    font-size: 1.2em;
+    margin: 15px 0;
+}
+
+.additional-feature-item p {
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.additional-feature-link {
+    color: rgb(153, 27, 27);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Footer Styles */
+footer {
+    background-color: rgb(38, 38, 38);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-logo {
+    height: 40px; /* Adjust logo size */
+    margin-bottom: 10px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .carousel-slide {
+        width: 30%; /* Adjust width for mobile */
+        height: 60%; /* Adjust height for mobile */
+    }
+
+    .carousel-description {
+        font-size: 1em;
+    }
+
+    .feature-item,
+    .additional-feature-item {
+        width: 100%;
+    }
 }
