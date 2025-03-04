@@ -5,23 +5,59 @@ import "./App.css";
 const carouselImages = [
   {
     url: "/images/gallery1.webp",
-    description: "Personalized AI Conversations",
+    description: "promt: portrait view, two women (ebony and blonde), kitchen, in front of window, nudity, lesbian",
   },
   {
     url: "/images/gallery2.webp",
-    description: "State-of-the-Art AI Models",
+    description: "promt: beautiful girl, naked, ginger, irish, curvy, tattoos, blushing, large breasts, big ass, long hair",
   },
   {
     url: "/images/gallery3.webp",
-    description: "24/7 Availability",
+    description: "promt: japanese girl, naked, small boobs, petite, in the bed, legs open, bukkake",
   },
   {
     url: "/images/gallery4.webp",
-    description: "Interactive AI Experiences",
+    description: "promt: nico robin, huge breasts, full body",
   },
   {
     url: "/images/gallery5.webp",
-    description: "Cutting-Edge Technology",
+    description: "promt: k-pop idol, blonde hair, on stage, fishnet thong, erect nipples",
+  },
+  {
+    url: "/images/gallery6.webp",
+    description: "promt: naked brazilian woman, fingering her vagina, muscular physique, steamy sauna, legs spread, smiling naughtily, sweaty skin",
+  },
+  {
+    url: "/images/gallery7.webp",
+    description: "promt: beautiful white women, big tits, big round ass",
+  },
+  {
+    url: "/images/gallery8.webp",
+    description: "promt: dominant, goth, ass",
+  },
+  {
+    url: "/images/gallery9.webp",
+    description: "promt: beautiful women, firefighter helmet, stripping, inside fire department",
+  },
+  {
+    url: "/images/gallery10.webp",
+    description: "promt: naked, tattooed, big tits, goth, threesome",
+  },
+  {
+    url: "/images/gallery11.webp",
+    description: "promt: hot curvy milf, curly, brunette, moaning",
+  },
+  {
+    url: "/images/gallery12.webp",
+    description: "promt: natural breasted brunette, pubic hair, wet all over, in the shower",
+  },
+  {
+    url: "/images/gallery13.webp",
+    description: "promt: beautiful girl, naked, rainbow hair, huge breasts, oiled skin, kneeling in a pool",
+  },
+  {
+    url: "/images/gallery14.webp",
+    description: "promt: full-length shot of a beautiful girl, short blue hair, naked, spaceship bedroom",
   },
 ];
 
@@ -29,20 +65,20 @@ const carouselImages = [
 const featureItems = [
   {
     image: "/images/feature1.webp",
-    title: "Personalized Conversations",
-    description: "Our AI adapts to your preferences for a tailored experience.",
+    title: "Generate custom AI porn in seconds",
+    description: "Our free AI porn generator lets your imagination run wild! Enjoy uncensored AI porn galleries full of hentai, photorealistic, asian, undress and hyperreal ai generated images. Get inspired and create your own perfect AI porn pics with getjuicy.ai endless customization features.",
     link: "#",
   },
   {
     image: "/images/feature2.webp",
-    title: "Advanced AI Models",
-    description: "State-of-the-art technology for realistic interactions.",
+    title: "Create your own hentai porn images",
+    description: "Generate unique hentai art based on your favorite anime and game characters with our ai hentai generator. Unlock the juiciest results with the most advanced ai models for ai NSFW art, hentai, furry, and anime character generation, enabling you to create your perfect ai waifu!",
     link: "#",
   },
   {
     image: "/images/feature3.webp",
-    title: "24/7 Availability",
-    description: "Always ready to chat, anytime, anywhere.",
+    title: "Undress celebrities and characters",
+    description: "Uncover new perspectives of your favorite celebrities or characters with our undress AI. Use our free undress AI and nudify technology and get your customized AI nudes in an instant. Explore the full range of our deepnude possibilities.",
     link: "#",
   },
 ];
@@ -51,32 +87,32 @@ const featureItems = [
 const additionalFeatureItems = [
   {
     image: "/images/feature4.webp",
-    title: "Real-Time Analytics",
-    description: "Track and analyze user interactions in real-time for better insights.",
+    title: "FETISH AND POSING",
+    description: "Try different NSFW AI poses and fetishes",
     link: "#",
   },
   {
     image: "/images/feature5.webp",
-    title: "Customizable AI",
-    description: "Tailor the AI to meet your specific needs and preferences.",
+    title: "LEARN AND COPY OTHER PROMPTS",
+    description: "Replicate images and enhance them to masterpieces",
     link: "#",
   },
   {
     image: "/images/feature6.webp",
-    title: "Multi-Language Support",
-    description: "Communicate with users in multiple languages seamlessly.",
+    title: "DEEP NUDE IMAGES",
+    description: "Undress your favorite celebrities and characters and modify their attributes",
     link: "#",
   },
   {
     image: "/images/feature7.webp",
-    title: "Secure & Private",
-    description: "Your data is safe with our advanced security protocols.",
+    title: "CREATIVE PORN AI",
+    description: "Discover different art styles and models",
     link: "#",
   },
   {
     image: "/images/feature8.webp",
-    title: "Scalable Solutions",
-    description: "Grow your AI capabilities as your business expands.",
+    title: "HD QUALITY PORN IMAGES",
+    description: "Details matter, we focus high quality porn images",
     link: "#",
   },
 ];
@@ -147,8 +183,8 @@ function App() {
       {/* Header Section with Background Image */}
       <header className="header-with-bg">
         <div className="container">
-          <h1>Juicy AI</h1>
-          <p>Your AI Companion for Fun and Entertainment</p>
+          <h1>The juiciest AI porn you will generate.</h1>
+          <p>Over 500,000 thousand AI porn pictures generated with your favorite AI porn generator.</p>
           {/* New button on top of the background image */}
           <button className="cta-button">Get Started</button>
         </div>
@@ -219,7 +255,7 @@ function App() {
                 <h3>{feature.title}</h3>
                 <p>{feature.description}</p>
                 <a href={feature.link} className="additional-feature-link">
-                  Learn More
+                  Get started
                 </a>
               </div>
             ))}
