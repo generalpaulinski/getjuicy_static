@@ -88,7 +88,6 @@ body {
     font-size: 1em;
 }
 
-/* Header with Background Image */
 .header-with-bg {
     background-image: url("../public/images/background.png");
     background-size: cover;
@@ -100,6 +99,23 @@ body {
     text-align: center;
     color: white;
     margin-top: 60px; /* Offset for fixed header */
+    position: relative; /* Required for the overlay */
+}
+
+.header-with-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+    z-index: 1; /* Ensure overlay is above the background image */
+}
+
+.header-with-bg .container {
+    position: relative; /* Ensure content is above the overlay */
+    z-index: 2;
 }
 
 .header-with-bg h1 {
@@ -123,9 +139,19 @@ body {
     border-radius: 25px; /* Rounded button */
 }
 
+/* Container Styles */
+.Container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh; /* Reduced height */
+    width: 50%;
+    margin: 0 auto; /* Center the container */
+}
+
 /* Carousel Styles */
 .carousel {
-    height: 100vh; /* Full height */
+    height: 70vh; /* Adjust height for better mobile view */
     position: relative;
     overflow: hidden;
     display: flex;
@@ -137,7 +163,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px; /* Space between images */
+    gap: 10px; /* Reduce gap between images */
     width: 100%;
     height: 100%;
 }
@@ -145,8 +171,8 @@ body {
 .carousel-slide {
     position: relative;
     transition: transform 0.5s ease, opacity 0.5s ease;
-    width: 20%; /* Each image takes 20% of the width */
-    height: 80%; /* Adjust height as needed */
+    width: 30%; /* Each image takes 30% of the width */
+    height: 70%; /* Adjust height as needed */
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -173,9 +199,9 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 1.5em;
+    font-size: 1.2em; /* Adjust font size for mobile */
     text-align: center;
-    width: 80%;
+    width: 90%; /* Adjust width for better readability */
 }
 
 /* First Feature Section (3 features) */
@@ -295,19 +321,54 @@ footer {
     margin-bottom: 10px;
 }
 
+.footer-link {
+    color: rgb(153, 27, 27);
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    margin: 5px;
+    display: inline-block;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.terms-of-service {
+    margin: 100px;
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
+    .carousel {
+        height: 50vh; /* Adjust height for mobile */
+    }
+
+    .carousel-container {
+        gap: 5px; /* Reduce gap further for mobile */
+    }
+
     .carousel-slide {
-        width: 30%; /* Adjust width for mobile */
-        height: 60%; /* Adjust height for mobile */
+        width: 80%; /* Show only the center image fully on mobile */
+        height: 80%; /* Adjust height for mobile */
+        opacity: 1; /* Ensure the center image is fully visible */
+        transform: scale(1); /* Ensure the center image is not scaled down */
+    }
+
+    .carousel-slide:not(.active) {
+        display: none; /* Hide side images on mobile */
     }
 
     .carousel-description {
-        font-size: 1em;
+        font-size: 1em; /* Adjust font size for mobile */
     }
 
     .feature-item,
     .additional-feature-item {
         width: 100%;
+    }
+    .Container {
+        width: 90%; /* Full width on mobile */
+        height: 60vh; /* Further reduce height for mobile */
     }
 }
