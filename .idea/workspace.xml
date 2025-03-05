@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29691049-b8d2-46d6-a161-e04b0e3bd8b1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/gallery10.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/gallery11.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/gallery12.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/gallery13.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/gallery14.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/gallery8.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/gallery9.webp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +66,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1741101981327</updated>
-      <workItem from="1741101984469" duration="19602000" />
+      <workItem from="1741101984469" duration="20093000" />
     </task>
     <servers />
   </component>
